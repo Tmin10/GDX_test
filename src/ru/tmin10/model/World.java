@@ -72,7 +72,7 @@ public class World extends Stage {
 	@Override
 	public boolean touchDragged(int arg0, int arg1, int arg2) {
 		Log.i("touchDragged", Integer.toString(arg0)+", "+Integer.toString(arg1)+", "+Integer.toString(arg2));
-		ShapeRenderer renderer = new ShapeRenderer();
+		/*ShapeRenderer renderer = new ShapeRenderer();
 		Camera c = this.getCamera(); 
 		renderer.setProjectionMatrix(c.combined);
 		renderer.begin(ShapeType.Line);
@@ -80,7 +80,7 @@ public class World extends Stage {
 		renderer.line(10, 10, 100, 100);
 		renderer.end();
 		c.update();
-		this.draw();
+		this.draw();*/
 		return true;
 	};
 

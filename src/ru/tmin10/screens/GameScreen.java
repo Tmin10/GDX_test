@@ -53,6 +53,14 @@ public class GameScreen implements Screen, InputProcessor {
 			//controller = new WorldController(world);
 			//Gdx.input.setInputProcessor(this);
 			
+			ShapeRenderer renderer = new ShapeRenderer();
+			renderer.setProjectionMatrix(cam.combined);
+			renderer.begin(ShapeType.Line);
+			renderer.setColor(1, 1, 0, 1);
+			renderer.line(10, 10, 100, 100);
+			renderer.end();
+			cam.update();
+			
 			Gdx.input.setInputProcessor(world);
 		}
 		
@@ -82,7 +90,13 @@ public class GameScreen implements Screen, InputProcessor {
 		}
 		
 		public void SetCamera(float x, float y){
-			this.cam.position.set(x, y,0);	
+			this.cam.position.set(x, y,0);
+			ShapeRenderer renderer = new ShapeRenderer();
+			renderer.setProjectionMatrix(cam.combined);
+			renderer.begin(ShapeType.Line);
+			renderer.setColor(1, 1, 0, 1);
+			renderer.line(10, 10, 100, 100);
+			renderer.end();
 			this.cam.update();
 		}
 		
